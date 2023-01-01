@@ -241,4 +241,23 @@ public class StreamReadConstraints
                     length, _maxStringLen));
         }
     }
+
+    /**
+     * Convenience method that can be used to verify that the
+     * total length does not exceed maximum specific by this
+     * constraints object: if it does, an
+     * {@link IllegalStateException}
+     * is thrown.
+     *
+     * @param length Total length in input units
+     *
+     * @throws IllegalStateException If length exceeds maximum
+     */
+    public void validateTotalLength(int length) throws IllegalStateException
+    {
+        if (length > _maxTotalLen) {
+            throw new IllegalStateException(String.format("Total length (%d) exceeds the maximum length (%d)",
+                    length, _maxTotalLen));
+        }
+    }
 }

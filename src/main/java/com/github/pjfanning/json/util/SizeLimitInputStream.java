@@ -1,6 +1,5 @@
 package com.github.pjfanning.json.util;
 
-
 import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
